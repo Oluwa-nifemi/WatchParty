@@ -244,8 +244,7 @@ module.exports = class WatchParty {
 
   /* ---- WatchParty definitions ---- */
   wpServers = {
-    H: "wss://mateusaquino-watchparty.hf.space",
-    U: "wss://mateusaqb-watchparty.hf.space",
+    N: "wss://oluwa-nifemi-watchparty.hf.space/",
     // L: "ws://localhost:3000/",
   };
 
