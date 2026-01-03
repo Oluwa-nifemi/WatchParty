@@ -149,6 +149,8 @@ function createParty(ws, params) {
     clients: [ws],
   };
   updateParty(parties[code]);
+
+  console.log(`${userName} created party`, parties[code])
 }
 
 function joinParty(ws, params) {
@@ -162,6 +164,8 @@ function joinParty(ws, params) {
     ws.userName = userName;
     party.clients.push(ws);
     updateParty(party);
+
+    console.log(`${userName} joined party`, parties[code])
   } else {
     ws.send("badroom");
     ws.terminate();
