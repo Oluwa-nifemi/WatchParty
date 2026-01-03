@@ -679,7 +679,7 @@ module.exports = class WatchParty {
           flex-direction: column;
           position: fixed;
           bottom: 0;
-          right: 0;
+          left: 0;
           z-index: 999999;
           margin-bottom: 120px;
           -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.0)));
