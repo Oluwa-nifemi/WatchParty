@@ -124,7 +124,7 @@ const parties = {};
 function generatePartyCode(tries = 0) {
   const characters = "0123456789ABCDEHIJKLMNORSTUVWYZ";
   const length = 5 + Math.floor(tries / 3);
-  let code = serverPrefix;
+  let code = "N";
   for (let i = 0; i < length; i++) {
     code += characters.charAt(Math.floor(Math.random() * characters.length));
   }
