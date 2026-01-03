@@ -1,3 +1,12 @@
+---
+title: WatchParty
+emoji: 🔥
+colorFrom: gray
+colorTo: indigo
+sdk: docker
+pinned: false
+---
+
 <h1 align="center">
   <img width="250" src="./logo.png" align="center"></img>
 </h1>
