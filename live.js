@@ -1,7 +1,7 @@
 const WebSocket = require("ws");
 
 const watchPartyVersion = "1";
-const serverPrefix = process.env.SERVER_PREFIX || "L";
+const serverPrefix = process.env.SERVER_PREFIX || "N";
 
 let wss;
 module.exports = (server) => {
@@ -74,11 +74,11 @@ function updateParty(party) {
   party.clients.forEach((ws) => {
     ws.send(
       "party:" +
-        JSON.stringify({
-          name: party.name,
-          code: party.code,
-          members: partyMembers,
-        })
+      JSON.stringify({
+        name: party.name,
+        code: party.code,
+        members: partyMembers,
+      })
     );
   });
 }
