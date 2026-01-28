@@ -104,9 +104,16 @@ module.exports = class WatchParty {
       const hideChat =
         document.querySelector('[ui-view="detail"]:not(.ng-hide)') ||
         document.querySelector(".control.active");
-      document.getElementById("wp-chat").style.pointerEvents = hideChat
-        ? "none"
-        : "auto";
+      const chatElement = document.getElementById("wp-chat");
+      if (hideChat) {
+        chatElement.style.pointerEvents = "none";
+        chatElement.style.display = "none";
+      } else {
+        chatElement.style.pointerEvents = "auto";
+        if (window.WatchParty.client) {
+          chatElement.style.display = "flex";
+        }
+      }
     }, 400);
     WatchParty.playerObserverPaused = null;
     WatchParty.playerObserverSpeed = null;
@@ -244,7 +251,8 @@ module.exports = class WatchParty {
 
   /* ---- WatchParty definitions ---- */
   wpServers = {
-    N: "wss://oluwa-nifemi-watchparty.hf.space/",
+    H: "wss://mateusaquino-watchparty.hf.space",
+    U: "wss://mateusaqb-watchparty.hf.space",
     // L: "ws://localhost:3000/",
   };
 
